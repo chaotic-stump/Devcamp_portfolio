@@ -3,6 +3,9 @@
     <strong>Title:</strong>
     <%= blog.title %>
   </p>
+  <p>
+    Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago
+  </p>
 
   <p>
     <strong>Body:</strong>
