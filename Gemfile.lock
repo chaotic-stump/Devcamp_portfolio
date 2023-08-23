@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/chaotic-stump/sparker_view_tool
+  revision: 25bbed58148e5be07ed0f7abc6dff741e69f6376
+  specs:
+    sparker_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -243,6 +249,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.6)
   sassc-rails
+  sparker_view_tool!
   sprockets-rails
   stimulus-rails
   turbo-rails

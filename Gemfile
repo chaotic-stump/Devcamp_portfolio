@@ -73,3 +73,5 @@ gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'better_errors', '~> 2.10', '>= 2.10.1'
 
 gem 'bootstrap', '~> 5.3.1'
+
+gem 'sparker_view_tool', git: 'https://github.com/chaotic-stump/sparker_view_tool'
