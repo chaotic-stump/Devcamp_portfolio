@@ -2,5 +2,5 @@
   <p><%= portfolio_item.subtitle %></p>
   <p><%= portfolio_item.body %></p>
   <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?%>
-  <%= link_to "Edit Portfolio Item", edit_portfolio_path(portfolio_item) %>
-  <%= button_to "Delete Post", portfolio_path(portfolio_item), method: :delete, data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' } %>
+  <%= link_to "Edit Portfolio Item", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
+  <%= button_to "Delete Post", portfolio_path(portfolio_item), method: :delete, data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
