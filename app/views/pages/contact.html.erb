@@ -1,8 +1,25 @@
-<h1>Contact page</h1>
-<p><%= number_to_phone "5555555555" %></p>
+<h1>Would you like to work together?</h1>
 
-<p><%= number_to_currency "18450" %></p>
+<hr>
 
-<p><%= number_to_percentage "80.4" %></p>
+<div class="row">
+  <div class="col-md-6">
+    <h3>Office Address:</h3>
+    <p>1600 Executive Way</p>
 
-<p><%= number_with_delimiter "1508726589264984" %></p>
+    <h3>Phone</h3>
+    <p><%= number_to_phone "5555555555" %></p>
+
+    <h3>Email</h3>
+    <p><a href="mailto:example@test.com?subject=PortfolioContact" "email me">Email me</a></p>
+  </div>
+  <div class="col-md-6">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37979.087267382245!2d-111.87671653548945!3d40.461791678722236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528026f1f95efb%3A0xf1d9fc18fe01eaba!2s1600%20W%20Executive%20Pkwy%2C%20Lehi%2C%20UT%2084043!5e0!3m2!1sen!2sus!4v1693517089559!5m2!1sen!2sus" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+
+<%#= number_to_currency "18450" %>
+<%#= number_to_percentage "80.4" %>
+
+<%#= number_with_delimiter "1508726589264984" %>
