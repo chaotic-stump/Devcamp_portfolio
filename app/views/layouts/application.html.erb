@@ -18,13 +18,17 @@
 
   <body>
 
-  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+  <div class="cover-container d-flex h-75 p-3 mx-auto flex-column">
 
     <%= render "shared/application_nav" %>
-    
-    <%= yield %>
+
+    <div class="content">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    </div>
 
     <%= render 'shared/application_footer' %>
 
