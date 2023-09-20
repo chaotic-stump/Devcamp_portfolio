@@ -2,10 +2,13 @@
   <div class="container">
     <div class="row">
       <p>
-        <a href="#">Back to top</a>
+        <%= copyright_generator %>
       </p>
       <p>
-        <%= copyright_generator %>
+        <% unless current_page?(portfolios_path) %>
+          <%= link_to "View All Portfolio Items", portfolios_path %> | 
+        <% end %>
+        <a href="#">Back to top</a>
       </p>
     </div>
   </div>
