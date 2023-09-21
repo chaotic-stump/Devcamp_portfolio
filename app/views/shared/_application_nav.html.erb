@@ -1,12 +1,8 @@
 <header>
   <div>
     <h3 class="float-md-start mb-0">Cover</h3>
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-      <%= link_to "Home", root_path, class: "nav-link fw-bold py-1 px-0" %>
-      <%= link_to "About", about_me_path, class: "nav-link fw-bold py-1 px-0" %>
-      <%= link_to "Contact", contact_path, class: "nav-link fw-bold py-1 px-0" %>
-      <%= link_to "Blog", blogs_path, class: "nav-link fw-bold py-1 px-0" %>
-      <%= link_to "Portfolio", portfolios_path, class:"nav-link fw-bold py-1 px-0" %>
+    <nav class="nav nav-masthead app-nav justify-content-center float-md-end">
+      <%= nav_helper 'nav-link', 'span' %>
       <%= login_helper 'nav-link' %>
     </nav>
   </div>
