@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+  
+  patch '/portfolios/:id/update_position', to: 'portfolios#update_position', as: 'update_position'
+
   resources :portfolios, except: [:show]
+
   get 'angular-items', to: 'portfolios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'\
 

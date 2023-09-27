@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @portfolio_items = Portfolio.by_position
+    @portfolio_items = Portfolio.order(:position)
   end
 
   def angular
@@ -57,15 +57,22 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def update_position
+    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item.insert_at(portfolio_params[:position].to_i)
+    head :ok
+  end
+
   private
     def set_portfolio_item
       @portfolio_item = Portfolio.find(params[:id])
     end
 
     def portfolio_params
-      params.require(:portfolio).permit(:title, 
-                                        :subtitle, 
-                                        :body, 
+      params.require(:portfolio).permit(:title,
+                                        :subtitle,
+                                        :body,
+                                        :position,
                                         technologies_attributes: [:name]
                                       )
     end

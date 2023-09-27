@@ -1,7 +1,11 @@
 <div class="album text-muted">
-  <div class="container">
-    <div class="row">
+  <div id="portfolio_items" class="container">
+    <ul
+      class="row sortable"
+      data-controller="sortable" 
+      data-sortable-resource-name-value="portfolio"
+    >
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
-    </div>
+    </ul>
   </div>
 </div>

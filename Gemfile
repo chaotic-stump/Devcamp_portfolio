@@ -79,4 +79,8 @@ gem 'petergate', '~> 3.0'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
-gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'acts_as_list'
+gem 'foreman', github: 'ddollar/foreman'
+gem "cssbundling-rails", "~> 1.3"
+
+gem "jsbundling-rails", "~> 1.2"
