@@ -2,38 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title><%= @page_title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
+          <%= render "shared/application_nav" %>
 
-  <div class="cover-container d-flex h-75 p-3 mx-auto flex-column">
+          <%= yield %>
 
-    <%= render "shared/application_nav" %>
+          <%= render "shared/application_footer" %>
 
-    <div class="content">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+          <%= source_helper("application") %>
 
-      <%= yield %>
-    </div>
-
-    <%= render 'shared/application_footer' %>
-
-    <%= source_helper("application") %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

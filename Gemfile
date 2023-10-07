@@ -72,7 +72,8 @@ gem 'devise', '~> 4.9', '>= 4.9.2'
 
 gem 'better_errors', '~> 2.10', '>= 2.10.1'
 
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 5.0'
+gem 'jquery-rails', '~> 4.4'
 
 gem 'sparker_view_tool', git: 'https://github.com/chaotic-stump/sparker_view_tool'
 gem 'petergate', '~> 3.0'
