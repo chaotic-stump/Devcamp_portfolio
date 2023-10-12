@@ -6,7 +6,12 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
-    acts_as_list
+  acts_as_list
+
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
+  
 
   # custom scopes
   def self.angular

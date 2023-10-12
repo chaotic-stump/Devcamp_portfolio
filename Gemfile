@@ -85,3 +85,7 @@ gem 'foreman', github: 'ddollar/foreman'
 gem "cssbundling-rails", "~> 1.3"
 
 gem "jsbundling-rails", "~> 1.2"
+
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'mini_magick', '~> 4.12'
+gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
