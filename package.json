@@ -14,6 +14,7 @@
     "popper.js": "^1.16.1",
     "sass": "^1.68.0",
     "sortablejs": "^1.15.0",
+    "stimulus-rails-nested-form": "^4.1.0",
     "stimulus-sortable": "^4.1.0"
   },
   "scripts": {
