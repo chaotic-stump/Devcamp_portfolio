@@ -1,7 +1,5 @@
-    <div class="form-group nested-form-wrapper" data-new-record="<%= f.object.new_record? %>">
+    <div class="form-group nested-fields">
       <%= f.label :name, class: "field" %>
       <%= f.text_field :name, class: "form-control field" %>
-      <button type="button" data-action="nested-form#remove">Remove todo</button>
-
-      <%= f.hidden_field :_destroy %>
+      <%= link_to_remove_association "Remove Task", f %>
     </div>

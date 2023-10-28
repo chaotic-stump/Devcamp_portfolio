@@ -73,7 +73,6 @@ gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'better_errors', '~> 2.10', '>= 2.10.1'
 
 gem 'bootstrap', '~> 5.0'
-gem 'jquery-rails', '~> 4.4'
 
 gem 'sparker_view_tool', git: 'https://github.com/chaotic-stump/sparker_view_tool'
 gem 'petergate', '~> 3.0'
@@ -91,4 +90,4 @@ gem 'mini_magick', '~> 4.12'
 gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 
 gem "binding_of_caller"
-gem 'cocoon', '~> 1.2', '>= 1.2.15'
+gem 'rondo_form', '~> 0.2.3'

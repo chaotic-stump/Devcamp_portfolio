@@ -4,4 +4,3 @@
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
 //= link portfolios.css
-//= require cocoon

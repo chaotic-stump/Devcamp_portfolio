@@ -9,3 +9,5 @@ import NestedForm from 'stimulus-rails-nested-form'
 const application = Application.start()
 application.register('sortable', Sortable)
 application.register('nested-form', NestedForm)
+import NestedRondoController from "./nested_rondo_controller"
+application.register("nested-rondo", NestedRondoController)
