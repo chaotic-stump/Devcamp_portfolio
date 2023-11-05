@@ -1,4 +1,7 @@
-<%= form_with model: @portfolio_item do |form| %>
+<%= form_with(model: @portfolio_item, data: {
+  controller: "nested-form",
+  nested_form_wrapper_selector_value: '.nested-form-wrapper'
+}) do |form| %>
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
@@ -32,17 +35,21 @@
 
   <hr />
   
-  <div data-controller="nested-rondo" class="col-md-12">
+  <div class="col-md-12">
 
     <h2>Technologies Used:</h2>
 
-    <div data-nested-rondo-target="fieldContain">
+    <div>
+    <template data-nested-form-target="template">
       <%= form.fields_for :technologies do |technology_form| %>
         <%= render 'technology_fields', class: 'form-control', f: technology_form %>
       <% end %>
+    </template>
+
+    <div data-nested-form-target="target"></div>
 
       <div class="links">
-        <%= link_to_add_association "Add Technology", form, :technologies %>
+        <button type="button" data-action="nested-form#add">Add technology</button>
       </div>
 
     </div>

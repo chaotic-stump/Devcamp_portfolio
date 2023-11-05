@@ -90,4 +90,3 @@ gem 'mini_magick', '~> 4.12'
 gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 
 gem "binding_of_caller"
-gem 'rondo_form', '~> 0.2.3'
