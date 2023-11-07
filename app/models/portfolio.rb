@@ -1,5 +1,5 @@
 class Portfolio < ApplicationRecord
-  has_many :technologies
+  has_many :technologies, dependent: :destroy, inverse_of: :portfolio
   accepts_nested_attributes_for :technologies,    
                                 allow_destroy: true,
                                 reject_if: :all_blank

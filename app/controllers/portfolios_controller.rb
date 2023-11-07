@@ -21,6 +21,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    @portfolio_item.technologies.build
   end
 
   def create

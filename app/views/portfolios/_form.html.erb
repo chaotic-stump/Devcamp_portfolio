@@ -45,6 +45,9 @@
         <%= render 'technology_fields', class: 'form-control', f: technology_form %>
       <% end %>
     </template>
+    <%= form.fields_for :technologies do |technology_form| %>
+      <%= render 'technology_fields', class: 'form-control', f: technology_form %>
+    <% end %>
 
     <div data-nested-form-target="target"></div>
 
