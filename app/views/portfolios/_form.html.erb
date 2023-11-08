@@ -40,27 +40,27 @@
     <h2>Technologies Used:</h2>
 
     <div>
-    <template data-nested-form-target="template">
+      <template data-nested-form-target="template">
+        <%= form.fields_for :technologies do |technology_form| %>
+          <%= render 'portfolios/technology_fields', class: 'form-control', f: technology_form %>
+        <% end %>
+      </template>
       <%= form.fields_for :technologies do |technology_form| %>
-        <%= render 'technology_fields', class: 'form-control', f: technology_form %>
-      <% end %>
-    </template>
-    <%= form.fields_for :technologies do |technology_form| %>
-      <%= render 'technology_fields', class: 'form-control', f: technology_form %>
-    <% end %>
+        <%= render 'portfolios/technology_fields', class: 'form-control', f: technology_form %>
+      <%  end %>
 
-    <div data-nested-form-target="target"></div>
+      <div data-nested-form-target="target"></div>
 
-      <div class="links">
-        <button type="button" data-action="nested-form#add">Add technology</button>
+        <div class="links">
+          <button type="button" data-action="nested-form#add">Add technology</button>
+        </div>
+
       </div>
-
+      
+      <div class="form-group">
+        <%= form.submit 'Save Portfolio Item', class: 'btn btn-primary mt-3' %>
+      </div>
     </div>
-    
-    <div class="form-group">
-      <%= form.submit 'Save Portfolio Item', class: 'btn btn-primary mt-3' %>
-    </div>
-  </div>
     
   </div>
 <% end %>

@@ -14,8 +14,8 @@
 
       <h2>Technologies Used:</h2>
 
-      <% @portfolio_item.technologies.each do |t| %>
-        <p><%= t.name %></p>
+      <% @portfolio_item.technologies.each do |tech| %>
+        <p><%= tech.name %></p>
       <% end %>
 
       <% if logged_in?(:site_admin) %>
