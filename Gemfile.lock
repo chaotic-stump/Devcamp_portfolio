@@ -98,6 +98,7 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
       sassc-rails (>= 2.0.0)
+    buftok (0.3.0)
     builder (3.2.4)
     byebug (11.1.3)
     carrierwave (2.2.4)
@@ -124,19 +125,32 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    domain_name (0.6.20231109)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
+    equalizer (0.0.11)
     erubi (1.12.0)
     execjs (2.9.1)
     ffi (1.15.5)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    http (5.1.1)
+      addressable (~> 2.8)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      llhttp-ffi (~> 0.4.0)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -165,6 +179,9 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    llhttp-ffi (0.4.0)
+      ffi-compiler (~> 1.0)
+      rake (~> 13.0)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -174,11 +191,15 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
     method_source (1.0.0)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
     minitest (5.18.1)
     msgpack (1.7.2)
+    multipart-post (2.3.0)
+    naught (1.1.0)
     net-imap (0.3.6)
       date
       net-protocol
@@ -254,6 +275,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    simple_oauth (0.3.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -265,12 +287,24 @@ GEM
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.2)
+    thread_safe (0.3.6)
     tilt (2.2.0)
     timeout (0.4.0)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
+    twitter (8.0.1)
+      addressable (~> 2.3)
+      buftok (~> 0.3.0)
+      equalizer (~> 0.0.11)
+      http (~> 5.1)
+      http-form_data (~> 2.3)
+      llhttp-ffi (~> 0.4.0)
+      memoizable (~> 0.4.0)
+      multipart-post (~> 2.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.3.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     warden (1.2.9)
@@ -317,6 +351,7 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   turbo-rails
+  twitter (~> 8.0, >= 8.0.1)
   tzinfo-data
   web-console
 
