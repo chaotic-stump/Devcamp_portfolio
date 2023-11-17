@@ -91,4 +91,6 @@ gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 
 gem "binding_of_caller"
 
+
 gem 'twitter', '~> 8.0', '>= 8.0.1'
+gem 'redis', '~> 5.0', '>= 5.0.8'
